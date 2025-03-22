@@ -1,0 +1,72 @@
+%% 1.1 nalezení statické hodnoty
+poles = [-3, -2, -1];
+
+num = [-1 25];
+den = poly(poles);
+
+G = tf(num, den); % definování systému
+
+K = rats(dcgain(G)) %nalezení statické hodnoty systému
+
+%% 1.2 nalezení ustálené hodnoty při vstupu U(t) = 5
+
+W = G * (tf([5], [1 0])); %násobení 5/S
+
+rats(dcgain(W * tf([1 0], [1]))) 
+
+%% 2.2 vykreslení grafů průběhu spočítaných funkcí
+
+t = linspace(0, 4, 1000);  % Time from 0 to 5 seconds
+
+% Compute x1(t) and x2(t)
+x1 = 2 * exp(-3*t) .* cos(2*t) - 3 * exp(-3*t) .* sin(2*t);
+x2 = (-1/2) * exp(-3*t) .* sin(2*t);
+
+% Plot both functions on the same graph
+figure;
+plot(t, x1, 'b', 'LineWidth', 0.6); % x1(t) in blue
+hold on;  % Keep current plot
+plot(t, x2, 'r', 'LineWidth', 0.6); % x2(t) in red
+hold off; % Release hold
+
+% Formatting
+grid on;
+xlabel('Čas[s]');
+ylabel('Amplituda');
+title('Časová odezva');
+legend({'x_1(t)',...
+        'x_2(t)'}, 'Location', 'best');
+
+saveas(gcf, 'time_response.eps', 'epsc');
+
+%% diskretizace systému
+
+num = [1 -3];   % (s - 3) -> Coefficients of s
+den = conv([1 1], [1 7]); % (s + 1)(s + 7)
+
+% Create transfer function
+G = tf(num, den);
+
+G1 = c2d(G, 0.1);
+G2 = c2d(G, 3);
+
+
+
+G
+G1
+G2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
