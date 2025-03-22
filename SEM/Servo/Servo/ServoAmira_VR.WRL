@@ -1,0 +1,776 @@
+#VRML V2.0 utf8
+
+#Created with V-Realm Builder v2.0
+#Integrated Data Systems Inc.
+#www.ids-net.com
+
+
+Viewpoint {
+	position	1.7685 0 9.5
+	description	"Start"
+}
+DEF merak Group {
+	children [ 
+	    DEF measure_u Group {
+		    bboxCenter	0 0 0
+		    bboxSize	-1 -1 -1
+		    children [ 
+			DEF plast_u Transform {
+				translation	-2.80542 0 0.05
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0
+							diffuseColor	1 1 1
+							shininess	0
+							transparency	0.5
+						}
+
+					}
+
+					geometry	Box {
+						size	0.4 3 0.1
+					}
+
+				}
+			}
+
+			DEF show_u Transform {
+				translation	-2.8054 0 0.05
+				center	0 -1 0
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0
+							diffuseColor	1 0 0
+							shininess	0
+						}
+
+					}
+
+					geometry	Box {
+						size	0.4 0.07 0.1
+					}
+
+				}
+			}
+		    ]
+	    }
+
+	    DEF measure_i Group {
+		    children [ 
+			DEF plast_i Transform {
+				translation	-1.38318 0 0.05
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0
+							diffuseColor	1 1 1
+							shininess	0
+							transparency	0.5
+						}
+
+					}
+
+					geometry	Box {
+						size	0.4 3 0.1
+					}
+
+				}
+			}
+
+			DEF show_i Transform {
+				translation	-1.38318 0 0.05
+				center	0 -1.5 0
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0
+							diffuseColor	0 1 0
+							shininess	0
+						}
+
+					}
+
+					geometry	Box {
+						size	0.4 0.07 0.1
+					}
+
+				}
+			}
+		    ]
+	    }
+
+	    DEF cover Transform {
+		    translation	1.7685 0 -0.5
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	0.6 0.6 0.6
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	12 4.7 1
+			    }
+
+		    }
+	    }
+
+	    DEF dial Transform {
+		    translation	0.744842 -2.32831e-007 -0.0999997
+		    rotation	1 0 0  1.5708
+		    scale	1 0.999989 0.999989
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0
+					    diffuseColor	0.95 0.95 0.95
+					    shininess	0
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	0.3
+				    radius	1.6
+			    }
+
+		    }
+	    }
+
+	    DEF dial2 Transform {
+		    translation	3.5 0 0
+		    children USE dial 	    }
+
+	    DEF fi Transform {
+		    translation	4.2448 0.625 0.08
+		    center	0 -0.625 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0
+					    diffuseColor	0 0 0
+					    shininess	0
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.05 1.25 0.05
+			    }
+
+		    }
+	    }
+
+	    DEF show_n Transform {
+		    translation	0.7448 0 0.08
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+						ambientIntensity	0
+						diffuseColor	0 0 0
+						shininess	0
+					}
+
+				}
+
+				geometry	Box {
+					size	0.05 0.05 0.05
+				}
+
+			}
+
+			DEF rucka Transform {
+				translation	0 0.6 0
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0
+							diffuseColor	0 0 0
+							shininess	0
+						}
+
+					}
+
+					geometry	Box {
+						size	0.05 1.2 0.05
+					}
+
+				}
+			}
+		    ]
+	    }
+
+	    DEF stick Transform {
+		    translation	6.48806 0 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0
+					    diffuseColor	1 1 1
+					    shininess	0
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	3
+				    radius	0.05
+			    }
+
+		    }
+	    }
+
+	    DEF show_m Transform {
+		    translation	6.48806 0 0.05
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0
+					    diffuseColor	0 0 0
+					    shininess	0
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.3 0.1 0.1
+			    }
+
+		    }
+	    }
+
+	    DEF desc_m Transform {
+		    translation	7.1171 0 0.0025
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0
+					    diffuseColor	1 1 1
+					    shininess	0
+				    }
+
+				    texture	ImageTexture {
+					    url	"texture/mer.JPG"
+					    repeatS	FALSE
+					    repeatT	FALSE
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.6 3 0.05
+			    }
+
+		    }
+	    }
+
+	    DEF desc_i Transform {
+		    translation	-2.06815 0 0.0025
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0
+					    diffuseColor	1 1 1
+					    shininess	0
+				    }
+
+				    texture	ImageTexture {
+					    url	"texture/mer_i.JPG"
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.6 3 0.05
+			    }
+
+		    }
+	    }
+
+	    DEF desc_u Transform {
+		    translation	-3.49039 0 0.0025
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0
+					    diffuseColor	1 1 1
+					    shininess	0
+				    }
+
+				    texture	ImageTexture {
+					    url	"texture/mer_u.JPG"
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.6 3 0.05
+			    }
+
+		    }
+	    }
+
+	    DEF description Group {
+		    bboxCenter	0 0 0
+		    bboxSize	-1 -1 -1
+		    children [ 
+			DEF nap Transform {
+				translation	-3.5 1.7 0.01
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0
+							diffuseColor	0 0 0
+							shininess	0
+						}
+
+					}
+
+					geometry	Text {
+						string	"U[V]"
+						fontStyle	FontStyle {
+							family	"SANS"
+							size	0.45
+							style	"BOLD"
+						}
+
+					}
+
+				}
+			}
+
+			DEF proud Transform {
+				translation	-2.2 1.7 0.01
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0
+							diffuseColor	0 0 0
+							shininess	0
+						}
+
+					}
+
+					geometry	Text {
+						string	"I[A]"
+						fontStyle	FontStyle {
+							family	"SANS"
+							size	0.45
+							style	"BOLD"
+						}
+
+					}
+
+				}
+			}
+
+			DEF moment Transform {
+				translation	6 1.7 0.01
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0
+							diffuseColor	0 0 0
+							shininess	0
+						}
+
+					}
+
+					geometry	Text {
+						string	"Mz [mNm]"
+						fontStyle	FontStyle {
+							family	"SANS"
+							size	0.45
+							style	"BOLD"
+						}
+
+					}
+
+				}
+			}
+
+			DEF otacky Transform {
+				translation	-0.05 -0.6 0.06
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0
+							diffuseColor	0 0 0
+							shininess	0
+						}
+
+					}
+
+					geometry	Text {
+						string	"x1000 ot/min"
+						fontStyle	FontStyle {
+							family	"SANS"
+							size	0.35
+							style	"BOLD"
+						}
+
+					}
+
+				}
+			}
+
+			DEF poloha Transform {
+				translation	3.7 -0.6 0.06
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0
+							diffuseColor	0 0 0
+							shininess	0
+						}
+
+					}
+
+					geometry	Text {
+						string	"Position"
+						fontStyle	FontStyle {
+							family	"SANS"
+							size	0.35
+							style	"BOLD"
+						}
+
+					}
+
+				}
+			}
+
+			DEF mosm Transform {
+				translation	-0.5 0.297015 0.10763
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0
+							diffuseColor	1 0 0
+							shininess	0
+						}
+
+					}
+
+					geometry	Text {
+						string	"-4"
+						fontStyle	FontStyle {
+							family	"SANS"
+							size	0.3
+							style	"BOLD"
+						}
+
+					}
+
+				}
+			}
+
+			DEF mctyri Transform {
+				translation	-0.100003 0.900003 0.0600001
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0
+							diffuseColor	1 0 0
+							shininess	0
+						}
+
+					}
+
+					geometry	Text {
+						string	"-2"
+						fontStyle	FontStyle {
+							family	"SANS"
+							size	0.3
+							style	"BOLD"
+						}
+
+					}
+
+				}
+			}
+
+			DEF pctyri Transform {
+				translation	1.2117 0.9 0.4015
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0
+							diffuseColor	1 0 0
+							shininess	0
+						}
+
+					}
+
+					geometry	Text {
+						string	"+2"
+						fontStyle	FontStyle {
+							family	"SANS"
+							size	0.3
+							style	"BOLD"
+						}
+
+					}
+
+				}
+			}
+
+			DEF posm Transform {
+				translation	1.6 0.3 0.06
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0
+							diffuseColor	1 0 0
+							shininess	0
+						}
+
+					}
+
+					geometry	Text {
+						string	"+4"
+						fontStyle	FontStyle {
+							family	"SANS"
+							size	0.3
+							style	"BOLD"
+						}
+
+					}
+
+				}
+			}
+
+			DEF pnul Transform {
+				translation	0.67 1.1 0.06
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0
+							diffuseColor	1 0 0
+							shininess	0
+						}
+
+					}
+
+					geometry	Text {
+						string	"0"
+						fontStyle	FontStyle {
+							family	"SANS"
+							size	0.3
+							style	"BOLD"
+						}
+
+					}
+
+				}
+			}
+
+			DEF stnul Transform {
+				translation	4.15 1.1 0.06
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0
+							diffuseColor	1 0 0
+							shininess	0
+						}
+
+					}
+
+					geometry	Text {
+						string	"0"
+						fontStyle	FontStyle {
+							family	"SANS"
+							size	0.3
+							style	"BOLD"
+						}
+
+					}
+
+				}
+			}
+
+			DEF stdev Transform {
+				translation	2.9 -0.1 0.0599991
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0
+							diffuseColor	1 0 0
+							shininess	0
+						}
+
+					}
+
+					geometry	Text {
+						string	"270"
+						fontStyle	FontStyle {
+							family	"SANS"
+							size	0.3
+							style	"BOLD"
+						}
+
+					}
+
+				}
+			}
+
+			DEF std70 Transform {
+				translation	5.24979 -0.090014 0.0600001
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0
+							diffuseColor	1 0 0
+							shininess	0
+						}
+
+					}
+
+					geometry	Text {
+						string	"90"
+						fontStyle	FontStyle {
+							family	"SANS"
+							size	0.3
+							style	"BOLD"
+						}
+
+					}
+
+				}
+			}
+
+			DEF ststo80 Transform {
+				translation	4 -1.3 0.06
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0
+							diffuseColor	1 0 0
+							shininess	0
+						}
+
+					}
+
+					geometry	Text {
+						string	"180"
+						fontStyle	FontStyle {
+							family	"SANS"
+							size	0.3
+							style	"BOLD"
+						}
+
+					}
+
+				}
+			}
+		    ]
+	    }
+
+	    DEF carky Group {
+		    children [ 
+			DEF carkaBig Transform {
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0
+							diffuseColor	1 0 0
+							shininess	0
+						}
+
+					}
+
+					geometry	Box {
+						size	0.05 0.2 0.05
+					}
+
+				}
+			}
+
+			DEF carkaSmall Transform {
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0
+							diffuseColor	1 0 0
+							shininess	0
+						}
+
+					}
+
+					geometry	Box {
+						size	0.05 0.17 0.05
+					}
+
+				}
+			}
+
+			DEF nula Transform {
+				translation	0.744838 1.5 0.15
+				children USE carkaBig 			}
+
+			DEF m8 Transform {
+				translation	-0.665162 0.513 0.15
+				rotation	0 0 1  1.22
+				children USE carkaBig 			}
+
+			DEF p8 Transform {
+				translation	2.1548 0.513 0.15
+				rotation	0 0 -1  1.22
+				children USE carkaBig 			}
+
+			DEF m4 Transform {
+				translation	-0.1155 1.2287 0.15
+				rotation	0 0 1  0.611
+				children USE carkaBig 			}
+
+			DEF p4 Transform {
+				translation	1.605 1.2287 0.15
+				rotation	0 0 -1  0.611
+				children USE carkaBig 			}
+
+			DEF m6 Transform {
+				translation	-0.4571 0.922 0.15
+				rotation	0 0 1  0.9163
+				children USE carkaSmall 			}
+
+			DEF p6 Transform {
+				translation	1.947 0.922 0.15
+				rotation	0 0 -1  0.9163
+				children USE carkaSmall 			}
+
+			DEF m2 Transform {
+				translation	0.2893 1.445 0.15
+				rotation	0 0 1  0.3054
+				children USE carkaSmall 			}
+
+			DEF p2 Transform {
+				translation	1.2004 1.445 0.15
+				rotation	0 0 -1  0.3054
+				children USE carkaSmall 			}
+
+			DEF st0 Transform {
+				translation	4.2148 1.5 0.15
+				children USE carkaBig 			}
+
+			DEF st90 Transform {
+				translation	2.75 0 0.15
+				rotation	0 0 -1  1.571
+				children USE carkaBig 			}
+
+			DEF st270 Transform {
+				translation	5.6796 0 0.15
+				rotation	0 0 -1  1.571
+				children USE carkaBig 			}
+
+			DEF st180 Transform {
+				translation	4.2148 -1.5 0.15
+				children USE carkaBig 			}
+		    ]
+	    }
+	]
+}
