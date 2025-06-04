@@ -1,0 +1,197 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\textheight235mm
+\textwidth160mm
+\voffset-20mm
+\hoffset-10mm
+\parindent0cm
+\parskip5mm
+
+\begin{document}
+
+{\Huge \textbf{hqr}}
+\bigskip
+\bigskip
+
+{\Large \textbf{Purpose}}
+
+Hyperbolic QR factorization
+\bigskip
+
+{\Large \textbf{Syntax}}
+
+{\tt [Q,R,Z] = hqr(A,J)
+
+[Q,R,Z] = hqr(A,J,tol)}
+\bigskip
+
+{\Large \textbf{Description}}
+
+Given a square matrix $A$ and a diagonal signature matrix $J$, the
+function computes a hyperbolic QR factorization of $A$ such that
+matrix
+\[
+QA = R
+\]
+has as many zero rows as the rank defect of $A$, and matrix $Q$ is
+$J$-orthogonal, i.e.
+\[
+Q^T J Q = J.
+\]
+Output vector {\tt Z} contains indices of non-zero rows in matrix
+$R$.
+
+The above factorization exists if and only if
+\[
+\mathrm{rank}\:A = \mathrm{rank}\: A^T J A
+\]
+otherwise the function returns empty output arguments.
+
+An optional tolerance parameter {\tt tol} can be specified as an
+input argument. It is used as an absolute threshold to detect zero
+elements during the reduction process. By default it is the global
+zeroing tolerance.
+
+\bigskip
+
+{\Large \textbf{Examples}}
+
+Consider first a standard example. One can check that the obtained
+matrix {\tt Q} is not orthogonal.
+\begin{verbatim}
+>> A
+A =
+     1     1     1     0
+     0     0     1     0
+     0     0     1     0
+     0     0     1     0
+
+>> J
+J =
+
+    -1     0     0     0
+     0     1     0     0
+     0     0    -1     0
+     0     0     0     1
+
+>> [Q,R,Z] = hqr(A,J)
+Q =
+    1.0000         0         0         0
+         0    1.0000   -1.0000    1.0000
+         0   -0.7071    1.4142   -0.7071
+         0   -0.7071         0    0.7071
+R =
+    1.0000    1.0000    1.0000         0
+         0         0    1.0000         0
+         0         0   -0.0000         0
+         0         0         0         0
+Z =
+     1     2
+
+>> svd(Q)
+ans =
+    2.4142
+    1.0000
+    1.0000
+    0.4142
+\end{verbatim}
+
+This second example shows that the location of zero rows in $R$
+is not arbitrary.
+\begin{verbatim}
+>> A
+A =
+     1     0     1     8
+     0     5     0     0
+     1     2     1     8
+     7     8     7     8
+
+>> J 
+J =
+     1     0     0     0
+     0     1     0     0
+     0     0    -1     0
+     0     0     0    -1
+
+>> [Q,R,Z] = hqr(A,J)
+Q =
+    2.5000    1.0000   -2.5000   -0.0000
+   -0.2337    0.9872   -0.1612    0.0564
+   -2.2987   -0.9872    2.6936   -0.0564
+   -0.1429         0    0.1429    1.0000
+R =
+   -0.0000         0   -0.0000    0.0000
+   -0.0000    5.0649   -0.0000   -2.7077
+    0.0000         0    0.0000    2.7077
+    7.0000    8.2857    7.0000    8.0000
+Z =
+     4     2     3
+\end{verbatim}
+
+Finally, this example shows that when the rank assumption on input
+matrices {\tt A} and {\tt J} is not satisfied, then function {\tt hqr}
+returns empty output arguments.
+\begin{verbatim}
+>> A
+A =
+     1     0
+     1     0
+
+>> J
+J =
+     1     0
+     0    -1
+
+>> rank(A'*J*A)
+ans =
+     0
+
+>> [Q,R,Z]=hqr(A,J)
+Q =
+     []
+R =
+     []
+Z =
+     []
+\end{verbatim}
+
+\bigskip
+
+{\Large \textbf{Algorithm}}
+
+The algorithm is described in reference [1]. It consists in
+zeroing iteratively entries in each column of $A$ by application
+of orthogonal (plane) rotations, row permutations and
+$J$-orthogonal (hyperbolic) rotations. Note that, unlike
+orthogonal rotations, $J$-orthogonal rotations may be potentially
+numerically instable.
+
+\bigskip
+
+{\Large \textbf{References}}
+
+[1] D. Henrion, P. Hippe. Hyperbolic QR factorization for J-spectral
+factorization of polynomial matrices. LAAS-CNRS Research Report,
+Toulouse, France, February 2003
+
+\bigskip
+
+{\Large \textbf{Diagnostics}}
+
+The function issues error messages under the following conditions:
+\begin{itemize}
+\item Input matrix {\tt A} is not square.
+\item Input matrix {\tt J} has a zero diagonal entry.
+\end{itemize}
+
+\bigskip
+
+{\Large \textbf{See also}}
+
+{\tt qr} \hspace{1em} Standard QR factorization.
+
+\end{document}

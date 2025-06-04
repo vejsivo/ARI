@@ -1,0 +1,36 @@
+<productinfo>
+
+<matlabrelease>13</matlabrelease>
+<name>Polynomial Toolbox</name>
+<type>toolbox</type>
+<icon>$toolbox/polynomial/polbox3.gif</icon>
+
+<list>
+
+<listitem>
+<label>Help</label>
+<callback>poldesk</callback>
+<icon>$toolbox/matlab/icons/book_sim.gif</icon>
+</listitem>
+
+<listitem>
+<label>Demos</label>
+<callback>demo toolbox Polynomial</callback>
+<icon>$toolbox/matlab/icons/demoicon.gif</icon>
+</listitem>
+
+<listitem>
+<label>Polynomial Matrix Editor</label>
+<callback>pme</callback>
+<icon>$toolbox/matlab/icons/figureicon.gif</icon>
+</listitem>
+
+<listitem>
+<label>Product Page (Web)</label>
+<callback>web http://www.polyx.cz/frm-main-product.htm -browser;</callback>
+<icon>$toolbox/matlab/icons/webicon.gif</icon>
+</listitem>
+
+</list>
+
+</productinfo>

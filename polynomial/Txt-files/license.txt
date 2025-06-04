@@ -1,0 +1,363 @@
+             POLYX, LTD SOFTWARE LICENSE AGREEMENT
+
+LICENSEE MAY RECEIVE A FULL REFUND IF WITHIN THIRTY (30) DAYS FROM 
+THE DATE OF DELIVERY (THE 'ACCEPTANCE PERIOD') LICENSEE DOES NOT 
+ACCEPT THE TERMS AND CONDITIONS OF THIS LICENSE AND THE APPLICABLE 
+ADDENDUM, OR IF LICENSEE TERMINATES THIS LICENSE FOR ANY REASON, 
+WITHIN THE ACCEPTANCE PERIOD. 
+ 
+LICENSE GRANT.  PolyX Ltd. ('PolyX') hereby grants to Licensee 
+a nonexclusive license to install and use the Program(s) and 
+accompanying Documentation as provided herein.  The licensed Programs
+and Documentation including Error Corrections and Enhancements are, 
+and shall at all times remain, the property of PolyX and/or its 
+licensors, and Licensee shall have no right, title, or interest 
+therein, except as expressly set forth in this Agreement. 
+
+
+DEFINITIONS. 
+
+Affiliate.  A person or legal entity which is controlled by, or
+controls, or is under common control with Licensee. Control means 
+(i) beneficial ownership of at least fifty percent (50%) of the 
+voting securities of a corporation or other business organization 
+with voting securities, or (ii) a fifty percent (50%) or greater 
+interest in the profits or capital of a partnership or other business 
+organization without voting securities.
+Concurrent Copies.  The combined number of simultaneous executions of 
+a Program in a Concurrent License.
+Distribution.  The distribution on physical media and/or electronic 
+distribution.
+Documentation.   The user guides and instructional material, if any, 
+accompanying delivery of a Program as may be updated from time to time.  
+Documentation may be delivered in hard copy and/or electronic format.
+Enhancement.  A change or addition to a Program, other than an Error 
+Correction, that improves its function, adds new function, or 
+enhances its performance.
+Error Correction.  A change to a Program that is in a form that 
+allows its application to the Program to reestablish material 
+conformity with the description of the Program's operation in the 
+related Documentation.
+Group Copies.  The combined number of installations of a Program in 
+a Group License.  
+Internal Operations. The use of a Program by employees of Licensee or 
+an Affiliate for the purpose of performing services on behalf of the 
+Licensee or Affiliate, or in the performance of services for Third 
+Parties who engage Licensee or an Affiliate for such services.  As 
+used herein, 'employees' includes student interns and consultants of 
+Licensee or its Affiliates.
+License.  PolyX grant to Licensee of a nonexclusive right to install 
+and use a Program in accordance with the License Option purchased.
+License Option.  The specific rights, restrictions, and obligations 
+under which Licensee may install and use a Program pursuant to this 
+Agreement, including the applicable Addendum. By accepting a Program 
+during the Acceptance Period, Licensee also accepts the applicable 
+rights and agrees to be bound by the applicable 
+obligations and restrictions of the License Option purchased. 
+Program.   The computer software delivered hereunder.
+Third Party.  Any person or legal entity which is not an Affiliate.
+
+INSTALLATION AND USE.  Specific rights, obligations, and restrictions 
+apply to each License Option.  By accepting the terms and conditions 
+of the Agreement, Licensee also accepts the applicable rights and 
+agrees to be bound by the applicable obligations and restrictions 
+of the License Option purchased. 
+
+   License Options.
+
+     Individual License.  The Programs may be installed and operated 
+     on a single designated computer.
+
+     Group License. The Programs may be installed and operated on a 
+     designated number of computers (up to the number of Group Copies 
+     purchased).  Licensee shall accurately administer, count, and 
+     control the number of copies of each licensed Program installed. 
+
+     Concurrent License.  The Programs may be installed on a single 
+     network server, and, where appropriate, portions of the Programs 
+     on individual computers to accelerate startup times, so long as 
+     the installations on the individual computers are controlled by 
+     the license manager on the single network server.  Licensee may 
+     have as many sessions of a Program in use at any given time as 
+     the number of Concurrent Copies purchased.
+
+     Academic License.  Programs licensed to degree-granting 
+     educational institutions at PolyX Academic License discount 
+     are restricted to use in connection with on-campus computing 
+     facilities that are used solely in support of classroom 
+     instruction and research activities of students, teaching 
+     faculty and staff, and research staff.  The right to use the 
+     Programs for any other purposes, including commercial purposes 
+     is expressly prohibited. 
+
+     Classroom License.  Programs licensed to degree-granting 
+     educational institutions at PolyX Classroom License discount 
+     are restricted to use in connection with on-campus computing 
+     facilities that are used solely in support of classroom 
+     instruction of students.  The right to use the Programs for any 
+     other purposes, including commercial purposes, is expressly 
+     prohibited.
+
+     Student License (Student versions of the Programs or any 
+     Programs licensed at a student discount).  Student Licenses 
+     are restricted to use on the student's own computer.  Student 
+     Licenses are further restricted to use in connection with 
+     courses offered by degree-granting institutions, either by 
+     students working toward a degree, or by continuing education 
+     students.  The right to use the Programs for any other purposes, 
+     including commercial purposes, is expressly prohibited.  
+     Notwithstanding anything to the contrary contained in this 
+     Agreement, Student Licenses are nontransferable.  Maintenance 
+     and Support are not provided with the Student License. 
+
+The Programs may be installed on a backup computer (while the 
+designated computer is disabled) or on a replacement computer.  
+Replacements include both permanent and temporary use at the 
+same or different site. Temporary use at a different site may include 
+installation for use at home by Licensee's employees, provided 
+Licensee permits such home use and Licensee otherwise complies with 
+the terms of this Agreement and causes its employees to so comply, 
+including full compliance with all applicable laws and regulations 
+relating to import and export of technical data and computer software.
+
+Licensee shall use the Programs only for Internal Operations.  
+Licensee may not sell, license, sublicense, rent, or 
+make the Programs available for use by any Third Parties.
+
+Licensee shall not provide access to the Programs via a Web 
+application. 
+
+Licensees of the Concurrent License option are prohibited 
+from providing Program access to users located outside 
+the country in which the license manager server is installed.
+
+Licensee may make backup copies of the Programs as necessary 
+to support the use of the Programs in accordance with this 
+Agreement. Licensee may not remove any copyright, trademark, 
+proprietary rights, disclaimer or warning notice included on 
+or embedded in any part of the Programs.  All copies of Programs 
+shall contain all copyright and proprietary notices as in 
+the original.  
+
+PolyX supplies its Programs and Documentation in archival form 
+on CD-ROM and by means of electronic distribution.  PolyX provides 
+the Licensee with a personal license number that specifies the 
+Programs licensed by Licensee.  Licensee shall not attempt to 
+access or use Programs that Licensee is not currently licensed 
+to use. Furthermore, Licensee shall not disclose the personal 
+license number or allow it to be used except for installation 
+of the Programs as provided herein. 
+
+Licensee shall not decompile, disassemble or otherwise reverse 
+engineer the Programs.  For European Union Licensees, 
+the following rights apply: 
+
+  EUROPEAN UNION: Licensee may only decompile, disassemble, 
+  or otherwise reverse engineer the Programs where any such act 
+  is necessary to create an independent program that is interoperable 
+  with the Programs or with another program or to observe, study, or 
+  test the functioning of the Programs solely in order to understand the 
+  ideas and principles that underlie any element of the Programs  
+  ('the Permitted Objective') and provided that:
+
+  (a) this may only be done if the information necessary to achieve 
+  the Permitted Objective has not already been made available or has 
+  not been provided by PolyX within a reasonable time of a written 
+  request to PolyX to provide such information;
+
+  (b) the compilation, disassembly, or reverse-engineering is 
+  confined to those parts of the Programs necessary to achieve 
+  the Permitted Objective;
+
+  (c) the information gained is not used for anything other than 
+  the Permitted Objective and is not disclosed to any other person
+  except as may be necessary to achieve the Permitted Objective; and
+
+  (d) the information obtained is not used to create a program 
+  substantially similar in its expression to the Programs including,
+  but not limited to, expressions of the Programs in other computer
+  languages, or for any other act restricted by copyright in the Programs.
+
+Except as expressly provided by this Agreement, Licensee may not 
+alter or modify the Programs without the consent of PolyX.  
+In particular, Licensee may not alter, adapt, translate, or convert 
+'M-files' or 'P-code' contained in the Programs in order to use those 
+files with any products other than products of PolyX, nor may the 
+Licensee incorporate or use 'M-files', 'P-code' or any other part 
+of the Programs in or as part of another computer program.
+
+All copies of the Programs and Documentation, whether made by 
+Licensee or otherwise, shall be subject to the terms of this Agreement.
+
+Licensee shall take appropriate action by instruction, agreement, or 
+otherwise with any persons permitted access to the Programs, so as 
+to enable Licensee to satisfy its obligations under the terms of this 
+Agreement.
+
+FEDERAL ACQUISITION.  This provision applies to all acquisitions 
+of the Program and Documentation by or for the federal government 
+of the United States of America.  By accepting delivery of the Program, 
+the government thereby agrees that this software qualifies as 'commercial' 
+computer software within the meaning of FAR Part 12.212, 
+DFARS Part 227.7202-1, DFARS Part 227.7202-3, DFARS Part 252.227-7013, 
+and DFARS Part 252.227-7014.  The terms and conditions of this Agreement 
+shall pertain to the government's use and disclosure of the Program and 
+Documentation, and shall supersede any conflicting contractual terms or 
+conditions.  If this license fails to meet the government's minimum needs
+or is inconsistent in any respect with federal procurement law, the 
+government agrees to return the Program and Documentation, unused, to PolyX.
+
+MAINTENANCE AND SUPPORT. During any paid Maintenance and Support 
+subscription term, if applicable, PolyX shall: deliver subsequent 
+releases of the Programs that are not charged for separately; 
+exert reasonable efforts to both (a) provide, within a reasonable 
+time, workarounds for any material programming errors in the 
+current release of the Programs that are directly attributable 
+to PolyX, and (b) correct such errors in the next available release, 
+provided Licensee provides PolyX with sufficient information to 
+identify the problems.  During this same paid Maintenance and 
+Support subscription term, Licensee shall also be entitled to receive 
+technical support by telephone, fax or electronic mail regarding 
+the installation and/or use of the Licensed Programs and their 
+interaction with hardware, operating environments, and other 
+software products. PolyX reserves the option to discontinue, 
+in whole or in part, offering Maintenance and Support subscriptions 
+for any Program or platform.  
+
+TERM.    This Agreement shall continue until the earlier of (a) 
+termination by PolyX or Licensee as provided below, or (b) such 
+time as there are no Programs being licensed to Licensee hereunder.  
+
+  For Annual Licenses: LICENSEE UNDERSTANDS AND AGREES THAT EACH 
+  ANNUAL LICENSE WILL TERMINATE AFTER EACH ONE (1) YEAR PERIOD, 
+  UNLESS LICENSEE RENEWS ITS LICENSE BY REMITTING THE THEN-CURRENT 
+  ANNUAL LICENSE RENEWAL FEE.  PolyX or its authorized distributor 
+  will notify Licensee in advance of each renewal term.  LICENSEE 
+  UNDERSTANDS THAT THE PROGRAMS WILL STOP OPERATING UNLESS LICENSEE 
+  PAYS THE LICENSE RENEWAL FEE AND IS GIVEN RENEWAL PASSCODES.  
+  Maintenance and Support subscriptions are included in the original 
+  license fee and any subsequent renewal.
+
+  For Perpetual Licenses: Licensee shall have the right to use the 
+  Programs indefinitely, subject to the TERMINATION provisions in
+  this Agreement.  LICENSEE UNDERSTANDS AND AGREES THAT THE 
+  MAINTENANCE AND SUPPORT OF EACH PERPETUAL LICENSE WILL TERMINATE
+  UPON EXPIRATION OF THE INITIAL ONE (1) YEAR SUBSCRIPTION TERM 
+  INCLUDED WITH THE PURCHASE OF THE LICENSE.  Thereafter, the 
+  Maintenance and Support subscription term may be renewed for any 
+  Program, in one year increments, at the then-current price, so long
+  as PolyX offers such Maintenance and Support.  PolyX or its 
+  authorized distributor will notify Licensee in advance of each 
+  Maintenance and Support subscription renewal term.
+
+  For Student Licenses: The Student License term extends only for 
+  the duration of Licensee's enrollment in a degree-granting 
+  institution or participation in a continuing education program 
+  of a degree-granting institution.
+
+TERMINATION.  PolyX may terminate this license grant, by written 
+notice to Licensee if Licensee breaches any material term of this 
+license, including failure to pay any license fees due, and Licensee 
+has not cured such breach within sixty (60) days of written 
+notification.  Licensee may terminate this license at any time, for 
+any reason.  Licensee shall not be entitled to any refund if this 
+license is terminated, except for license fees paid for any 
+Programs for which the Acceptance Period has not expired at the 
+time of termination.  Upon termination, Licensee shall promptly 
+return all but archival copies of the Programs and Documentation in 
+Licensee's possession or control, or promptly provide written 
+certification of their destruction.
+
+EXPORT CONTROL.  The Programs may be subject to export control 
+laws of the Czech Republic. Notwithstanding any other term of 
+this Agreement or third party agreement, Licensee's rights under 
+this Agreement may not be exercised by Licensee or any Third 
+Party in violation of such laws and regulations, nor may this 
+Agreement be transferred to any party where doing so would 
+result in such a violation.  The terms of any limitation on the 
+use, transfer or re-export of the Programs and Documentation 
+imposed by PolyX in any Destination Control Statement or other 
+document for the purpose of export control shall prevail over 
+any term in this Agreement.
+
+TAXES, DUTIES, CUSTOMS.  Absent appropriate exemption certificate(s), 
+Licensee shall pay all taxes, duties, or customs, except for taxes 
+based on PolyX net income.
+
+USE OF NAME AND TRADEMARKS.  Licensee shall not use the name, trade 
+names or trademarks of PolyX or any of its Affiliates in any 
+advertising, promotional literature or any other material, whether 
+in written, electronic, or other form, distributed to any Third Party, 
+except in the form provided by PolyX, and then solely for purposes 
+of identifying PolyX Programs. 
+
+ASSIGNMENT. This license is nontransferable to a Third Party without 
+PolyX consent, which shall not be unreasonably withheld.  This 
+license may be transferred to an Affiliate provided that PolyX 
+is notified in writing of the transfer and the Affiliate accepts 
+these same terms and conditions.
+
+LIMITATION OF LIABILITY.  THE PROGRAMS SHOULD NOT BE RELIED ON AS 
+THE SOLE BASIS TO SOLVE A PROBLEM WHOSE INCORRECT SOLUTION COULD 
+RESULT IN INJURY TO PERSON OR PROPERTY.  IF A PROGRAM IS EMPLOYED 
+IN SUCH A MANNER, IT IS AT THE LICENSEE'S OWN RISK AND POLYX 
+EXPLICITLY DISCLAIMS ALL LIABILITY FOR SUCH MISUSE TO THE EXTENT 
+ALLOWED BY LAW. POLYX'S LIABILITY FOR DEATH OR PERSONAL INJURY 
+RESULTING FROM NEGLIGENCE OR FOR ANY OTHER MATTER IN RELATION TO 
+WHICH LIABILITY BY LAW CANNOT BE EXCLUDED OR LIMITED SHALL NOT 
+BE EXCLUDED OR LIMITED. EXCEPT AS AFORESAID, (A) ANY OTHER 
+LIABILITY OF POLYX (WHETHER IN RELATION TO BREACH OF CONTRACT, 
+NEGLIGENCE OR OTHERWISE) SHALL NOT IN TOTAL EXCEED THE AMOUNT 
+PAID TO POLYX UNDER THIS AGREEMENT IN THE TWELVE MONTH PERIOD 
+PRECEDING THE CLAIM IN QUESTION, FOR THE PROGRAM WITH RESPECT 
+TO WHICH THE LIABILITY IN QUESTION ARISES, AS INSTALLED ON THE 
+DESIGNATED COMPUTER(S) OR DESIGNATED SERVER(S) FOR WHICH USE OF 
+THE PROGRAM IS LICENSED HEREUNDER; AND (B) POLYX SHALL HAVE NO 
+LIABILITY FOR ANY INDIRECT OR CONSEQUENTIAL LOSS (WHETHER 
+FORESEEABLE OR OTHERWISE AND INCLUDING LOSS OF PROFITS, LOSS OF 
+BUSINESS, LOSS OF OPPORTUNITY, AND LOSS OF USE OF ANY COMPUTER 
+HARDWARE OR SOFTWARE).  SOME STATES DO NOT ALLOW THE EXCLUSION 
+OR LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE 
+ABOVE EXCLUSION OR LIMITATION MAY NOT APPLY TO LICENSEE.  
+
+LIMITED WARRANTY/LIMITATION OF REMEDIES.  PolyX warrants that PolyX 
+or its licensors has the right to grant the license rights hereunder.  
+PolyX warrants that the physical media provided shall be free from 
+defects in material and workmanship for a period of ninety (90) days 
+from delivery, or it will be replaced by PolyX at no cost to Licensee.  
+PolyX further warrants, for a period of one (1) year from delivery, 
+that each copy of each Program will conform in all material respects 
+to the description of such Program's operation in the Documentation.  
+In the event that the Program does not operate as warranted, 
+Licensee's exclusive remedy and PolyX sole liability under this 
+warranty shall be a) the correction or workaround by PolyX of major 
+defects within a reasonable time, or b) should such correction or 
+workaround prove neither satisfactory nor practical, termination of 
+the relevant license and refund of the initial license fee paid to 
+PolyX for the Programs.  All requests for warranty assistance should 
+be directed to  PolyX, Ltd., Jarní 4, 16000, Prague 6, Czech Republic.  
+EXCEPT AS EXPRESSLY PROVIDED BY THIS AGREEMENT (OR AS IMPLIED BY LAW 
+WHERE THE LAW PROVIDES THAT THE PARTICULAR TERMS IMPLIED CANNOT BE 
+EXCLUDED BY CONTRACT), ALL OTHER CONDITIONS, WARRANTIES, OR OTHER 
+TERMS (INCLUDING ANY WITH REGARD TO INFRINGEMENT, MERCHANTABLE QUALITY, 
+OR FITNESS FOR PURPOSE) ARE EXCLUDED.  SOME STATES DO NOT ALLOW 
+LIMITATIONS ON HOW LONG AN IMPLIED WARRANTY LASTS, SO THE ABOVE 
+LIMITATION MAY NOT APPLY TO LICENSEE.  THIS WARRANTY GIVES LICENSEE 
+SPECIFIC LEGAL RIGHTS AND LICENSEE MAY ALSO HAVE OTHER RIGHTS 
+WHICH VARY FROM STATE TO STATE.  LICENSEE ACCEPTS RESPONSIBILITY FOR 
+ITS USE OF THE PROGRAMS AND THE RESULTS OBTAINED THEREFROM.
+
+GENERAL. To the extent any law, treaty, or regulation is in conflict 
+with this Agreement, the conflicting terms of this Agreement shall 
+be superseded only to the extent necessary by such law, treaty, or 
+regulation.  If any provision of this Agreement shall be otherwise 
+unlawful, void, or otherwise unenforceable, that provision shall 
+be enforced to the maximum extent permissible.  In either case, 
+the remainder of this Agreement shall not be affected.  The 
+parties agree that the U.N. Convention on Contracts for the 
+International Sale of Goods shall not apply to this Agreement.  
+This Agreement contains the entire understanding of the parties 
+and may not be modified or amended except by written instrument, 
+executed by authorized representatives of PolyX and Licensee.
+
+01/01/99

@@ -1,0 +1,330 @@
+function P = pol(varargin)
+%POL    Create polynomial
+%
+% The commmand
+%    P =  POL(A,D) 
+% with constant matrix A = [P0,P1,P2,...,PD] creates a polynomial
+% matrix 
+%    P(v) = P0 + P1*v + P2*v^2 + .. + PD*v^D
+% with coefficients ordered according to ascending powers of v.
+%
+% The commmand
+%    P =  POL(A) 
+% with constant matrix A creates  a zero degree polynomial matrix.
+%
+% The above syntaxes may be followed by PropertyValue arguments.
+% See PROPS for details on assignable properties.
+%
+% The command  P = POL(A) returns P = A if A is already
+% a polynomial matrix. 
+%   
+% If A is zero and/or D = -Inf then P is a zero polynomial matrix.
+% If A and/or D is empty then an empty polynomial matrix object is
+% created.
+%
+% If not specified by a PropertyValue argument then the variable string 
+% 'v' copies the current value of the global variable symbol. 
+% The string may be
+%  * the continuous-time derivative operator: 's' (default) or 'p'
+%  * the discrete-time forward shift (advance) operator: 'z' or 'q'
+%  * the discrete-time backward shift (delay) operator: 'd' or 'z^-1'
+%
+% If A is a symbolic matrix of the Symbolic Toolbox then
+% P = POL(A) converts A to a polynomial matrix P. The variable string
+% copies the current value of the global variable symbol.
+%
+% If A is a 3-dim constant Matlab matrix, and [sz1,sz2,sz3] = size(A), 
+% P = POL(A) returns the corresponding polynomial matrix of degree D = sz3-1.
+% and P0 = A(:,:,1),..., PD = A(:,:,end). 
+%
+% Those who prefer the coefficients to be ordered according to descending 
+% powers should use LOP.
+%
+% See also TSP/POL, RDF/POL, LDF/POL, MDF/POL, SDF/POL.
+
+% The internal structure of the polynomial matrix object P is as follows:
+%
+% P.d is the degree of P(s);
+%
+% P.s is the size of P(s), a two-element row vector [nrow, ncol] containing
+% the number of rows and columns;
+%
+% P.c is a three-dimensional array containing matrix coefficients of P(s).
+% More specifically, P.c(:,:,1) = P0, P.c(:,:,2) = P1 and
+% P.c(:, :, D+1) = PD.
+%
+% P.v is the variable string;
+%
+% P.h is the sampling period;
+%
+% P.u is a user data field;
+%
+% P.version is the version number, always 3.0;
+
+%       Author(s):  D. Henrion, S. Pejchova, M. Sebek 12-2-98
+%       Copyright (c) 1998 by Polyx, Ltd.
+%       $Revision: 3.0 $  $Date: 11-Oct-1999 12:00:00  J.Jezek  $
+%       $Revision: 3.0 $  $Date: 27-Mar-2000 11:12:11  S.Pejchova $
+%                         $Date: 15-Jun-2000 14:00:00  J.Jezek  $
+%                         $Date: 25-Jul-2000 17:00:00  S.Pejchova  $
+%                         $Date: 31-Jul-2000 D.Henrion  $
+%                         $Date: 03-Aug-2000 J.Jezek    $
+%                         $Date: 28-Feb=2003 J.Jezek    $
+
+global PGLOBAL;
+eval('PGLOBAL.VARIABLE;','painit;');
+
+na = nargin; vvx='';
+if na>=1 & isa(varargin{1},'pol'),   % Quick exit
+   P = varargin{1};
+   if na==1 | (na==2 & isa(varargin{2},'double')),  %TOL ignored
+   else
+      props(P,varargin{2:na});
+   end;
+   return;
+end;
+
+if na>=3 & (isa(varargin{1},'double') & ... %state space arguments
+      isa(varargin{2},'double') & isa(varargin{3},'double')),
+   A = varargin{1}; B = varargin{2}; C = varargin{3};
+   n = size(A,1); m = size(B,2); p = size(C,1);
+
+   var = PGLOBAL.VARIABLE; tol = [];
+   lastarg = varargin{na};
+   if isa(lastarg,'char'),
+      if ~isempty(lastarg),
+         switch lastarg,
+         case {'s','p','z','q','d','zi','z^-1'}
+            var = lastarg;
+         otherwise
+            tol = str2double(lastarg);
+            if isnan(tol),
+               error('Invalid last argument.');
+            end;
+         end;
+      end;
+      na = na-1;
+      lastarg = varargin{na};
+      if isa(lastarg,'char'),
+         if ~isempty(lastarg),
+            switch lastarg,
+            case {'s','p','z','q','d','zi','z^-1'}
+               var = lastarg;
+            otherwise
+               tol = str2double(lastarg);
+               if isnan(tol),
+                  error('Invalid last but one argument.');
+               end;
+            end;
+         end;
+         na = na-1;
+      end;
+   end;
+   if isempty(tol), tol = PGLOBAL.ZEROING;
+   end;
+   
+   savedvar = PGLOBAL.VARIABLE; PGLOBAL.VARIABLE = 'z';
+   if na<=4,
+      if na==3,
+         D = zeros(p,m);
+      elseif na==4,
+         D = varargin{4};
+         if ~isa(D,'double') & ~isa(D,'pol'),
+            error('Invalid 4th argument.');
+         end;
+      end;
+      N = 0; P = 0;
+      if p>=m,
+         eval('[N,D] = ss2rmf(A,B,C,D,tol);','error(peel(lasterr));');
+         P = rdf(N,D);
+      else
+         eval('[N,D] = ss2lmf(A,B,C,D,tol);','error(peel(lasterr));');
+         P = ldf(D,N);
+      end;
+      
+   elseif na==5,
+      D = varargin{4}; E = varargin{5};
+      if ~isa(D,'double'),
+         error('Invalid 4th argument.');
+      end;
+      if ~isa(E,'double'),
+         error('Invalid 5th argument.');
+      end;
+      N = 0; P = 0;
+      if p>=m,
+         eval('[N,D] = dss2rmf(A,B,C,D,E,tol);','error(peel(lasterr));');
+         P = rdf(N,D);
+      else
+         eval('[N,D] = dss2lmf(A,B,C,D,E,tol);','error(peel(lasterr));');
+         P = ldf(D,N);
+      end;
+   else
+      error('Too many input arguments.');
+   end;
+   PGLOBAL.VARIABLE = savedvar;
+   
+   switch var,
+   case {'s','p','q','z'}
+      P.frac.v = var;
+   case {'d'}
+      P.frac.v = 'd'; P = reverse(P);
+   case {'zi','z^-1'}
+      P.frac.v = 'z'; P = reverse(P);
+   end;
+    
+   [P,Pcl] = defract(reduce(coprime(P)));
+   if ~strcmp(Pcl,'pol'),
+      error('Argument cannot be converted to polynomial.');
+   end;
+   return;
+end;
+
+if na>=1 & isa(varargin{1},'sym'),
+
+  % Transform symbolic matrix into polynomial matrix
+  % Author: D. Henrion, September 22, 1998.
+  % Modified by D. Henrion, July 31, 2000.
+
+  Asym = varargin{1};
+  var = '';
+  
+  %parse input argument: variable symbol
+  if na>2,
+     error('Too many input arguments.');
+  elseif na==2,
+     arg = varargin{2};
+     if ~isa(arg,'char'),
+        error('Invalid 2nd argument; must be a valid variable name.');
+     else
+        var = arg;
+     end;
+  end;
+     
+  As = size(Asym);
+  Ac = zeros([As 1]);
+  Ad = 0;
+  
+  coeff = 0;
+  % Convert each polynomial entry with Symbolic Toolbox macro SYM2POLY
+  for row = 1:As(1),
+   for col = 1:As(2),
+    eval('coeff = sym2poly(Asym(row, col));','error(peel(lasterr));');
+    degree = length(coeff)-1;
+    if degree~=0 | any(any(coeff~=0)), % non-zero entry
+      Ad = max(Ad, degree);
+      Ac(row, col, (degree+1):-1:1) = coeff;
+    end;
+   end;
+  end;
+
+  % check variable symbol
+  if isempty(var),
+     var = findsym(Asym);
+  end;
+  switch var,
+   case {'s','p','z','q','d','zi','z^-1',''}
+   otherwise
+   error('Invalid variable symbol in symbolic expression.');
+  end;
+
+  % build polynomial matrix
+
+  Ac = reshape(Ac, As(1), (Ad+1)*As(2));
+  P = pol(Ac, Ad, var);  
+  return;
+end;
+
+if na & isa(varargin{1},'lti'),
+   if na > 1,
+      error('Use PROPS to modify the properties of the POL object.');
+   end;   
+   sys = varargin{1};
+   eval('P = pol(mdf(sys));','error(peel(lasterr));');
+   return;
+end;
+
+superiorto('double');
+
+eval('PGLOBAL.VARIABLE;', 'painit;');
+vvx = PGLOBAL.VARIABLE;
+
+if na==0,
+   A = [];
+else
+   A = varargin{1};
+   if ~isa(A,'double') | ndims(A)>3,
+      error('Argument is not convertible to polynomial.');
+   end;   
+end;
+
+% Default property values
+PropValStart = 0;
+d = 0; [nrow, ncol,ndeg] = size(A);
+P.d = []; 
+P.s = [nrow, ncol];
+P.c = zeros([nrow, ncol,0]);
+P.v = '';
+P.h = [];
+P.u = [];
+P.version = 3.0;
+
+% Process numerical data
+if na > 1,
+   PropValStart=2; dx = varargin{2};
+   if isa(dx,'double')&(length(dx)<=1),
+      d=dx;  PropValStart=3; A=A(:,:); ncol=size(A,2); ndeg=1;
+      % constant polynomial matrix with degree
+   end;
+end
+if ndeg~=1,
+  % convert the 3-dimensional constant matrix
+  if nrow & ncol,
+     if ~ndeg,
+        P.d = -Inf;
+     else,
+        P.d = ndeg-1;
+        P.c = A;
+        P.v = vvx;
+     end;
+  end; 
+elseif ~isempty(d),
+  % convert the input to the desired form :
+  % a standard polynomial matrix of degree d
+  if d >= 0 & isfinite(d),
+     P.d = d;
+     if rem(ncol, d+1), error('Degree inconsistent with the number of columns.');
+     else,
+        ncol = ncol / (d+1);
+        P.s = [nrow ncol];
+     end;
+    
+     P.c = reshape(A, [nrow ncol d+1]);
+     if nrow==0 | ncol==0,
+        P.d = []; P.c = zeros(nrow,ncol,0);
+     elseif d>0,
+        P.v = vvx;
+        if strcmp(vvx,'s') | strcmp(vvx,'p'),
+           P.h = 0;
+        elseif ~isempty(vvx),
+           P.h = 1;
+        end;
+     end;
+  elseif isinf(d) & d<0 & ~isempty(A) & ~any(A),
+    % the zero polynomial
+     P.d = -Inf;
+  else,
+     error('Invalid degree.');
+  end % if d >= 0
+elseif ~isempty(A), 
+   error('Inconsistent degree.');
+end; % if ndeg~=1,...
+   
+P = class(P,'pol');
+P = pclear(P);
+
+% Set Property Values
+if (PropValStart>0) & (PropValStart <= na),
+   props(P,varargin{PropValStart:na});
+end
+
+%end .. @pol/pol

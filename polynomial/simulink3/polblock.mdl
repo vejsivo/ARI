@@ -1,0 +1,252 @@
+Model {
+  Name			  "polblock"
+  Version		  3.00
+  SimParamPage		  "Solver"
+  SampleTimeColors	  off
+  InvariantConstants	  off
+  WideVectorLines	  off
+  ShowLineWidths	  off
+  ShowPortDataTypes	  off
+  StartTime		  "0.0"
+  StopTime		  "10.0"
+  SolverMode		  "SingleTasking"
+  Solver		  "ode45"
+  RelTol		  "1e-3"
+  AbsTol		  "1e-6"
+  Refine		  "1"
+  MaxStep		  "auto"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Matrix"
+  LimitMaxRows		  off
+  MaxRows		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  IntegerOverflowMsg	  "warning"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  SignalLabelMismatchMsg  "none"
+  ConsistencyChecking	  "off"
+  ZeroCross		  on
+  SimulationMode	  "normal"
+  BlockDataTips		  on
+  BlockParametersDataTip  on
+  BlockAttributesDataTip  off
+  BlockPortWidthsDataTip  off
+  BlockDescriptionStringDataTip	off
+  BlockMaskParametersDataTip off
+  ToolBar		  off
+  StatusBar		  off
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  BooleanDataType	  off
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_unix.tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "oneshot"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  off
+  Created		  "Tue May 04 14:42:52 1999"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Tue May 04 14:43:18 1999"
+  ModelVersionFormat	  "1.%<AutoIncrement:1>"
+  ConfigurationManager	  "none"
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "polblock"
+    Location		    [197, 355, 401, 516]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    AutoZoom		    on
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "PMF"
+      Ports		      [1, 1, 0, 0, 0]
+      Position		      [45, 95, 155, 135]
+      ShowPortLabels	      on
+      MaskType		      "PMF Block"
+      MaskDescription	      "Polynomial matrix fraction description of a lin"
+"ear system.\n\nThis block represents a linear system defined by the polynomia"
+"l matrix fraction of its transfer function."
+      MaskHelp		      "This block represents a linear system [<I>A,B,C"
+",D</I>] defined by the polynomial matrix fraction (<I>PMF</I>) of its transfe"
+"r function <I>T</I>.  \n<p>\n<b>Left Matrix Fraction</b> item of the popup me"
+"nu <b>Type</b> indicates the transfer function in the form of <I>left PMF</I>"
+":  \n<p>\n<I>T</I> = inv(<I>Q</I>) <I>P</I>.\n<p> \n<b>Right Matrix Fraction<"
+"/b> item is used if the transfer function is given in the form of <I>right PM"
+"F</I>:\n<p> \n<I>T</I> = <I>P</I> inv(<I>Q</I>). \n<p>\n The <b>variable</b> "
+"determines the type  of the system:\n<p>\n- <b>s, p</b> are used for continou"
+"s time systems (Laplace transform).\n<p>\n- <b>z, q</b> are used for discrete"
+" time transfer functions in forward-shift operator (Z-transform).\n<p>\n- <b>"
+"d, z^-1</b> are used for discrete time transfer functions in backward-shift o"
+"perator.\n<p>\n<b> Note:</b> For the variables <I>s,p,z,q</I>, the transfer f"
+"unction is defined as\n<p>\n<I>T</I> = <I>C</I> inv(<I>vI-A</I>) <I>B</I> + <"
+"I>D</I>,\n<p>\nwhere <I>v</I> is the variable of <I>P,Q</I>.\nFor the variabl"
+"es <I>d, z^-1</I>, the transfer function is defined as\n<p>\n<I>T</I> = <I>C "
+"v</I> inv(<I>I-Av</I>)  <I>B</I> + <I>D</I>.\n<p>\n<b>Note:</b> <b>Initial st"
+"ates</b> concern the observer-form realization of the system as defined by LM"
+"F2S and RMF2S functions. Their number must equal the sum of column degrees of"
+" the denominator matrix <I>Q</I> in case of right PMF and the sum of row degr"
+"ees of <I>Q</I> for left PMF description. \n<p>\nSee also POL, LMF2S, RMF2S."
+      MaskPromptString	      "Type:|Numerator P:|Denominator Q:|Initial state"
+"s:|Sample time (discrete time only):|Force variable:"
+      MaskStyleString	      "popup(Left Matrix Fraction|Right Matrix Fractio"
+"n),edit,edit,edit,edit,popup(No change|s   (continous time)|p   (continous ti"
+"me)|z      (discrete time)|q      (discrete time)|d      (discrete time)|z^-1"
+" (discrete time))"
+      MaskTunableValueString  "on,on,on,on,on,on"
+      MaskCallbackString      "|||||"
+      MaskEnableString	      "on,on,on,on,on,on"
+      MaskVisibilityString    "on,on,on,on,on,on"
+      MaskVariables	      "Type=@1;P=@2;Q=@3;InCon=@4;SampTime=@5;fvar=@6;"
+      MaskInitialization      "Q=pol(Q);\nP=pol(P);\nLabel = 'xxx';\n[A,B,C,D,"
+"Label,var] = polymask(P,Q, Type, fvar, length(InCon));\nupdate;\n"
+      MaskDisplay	      "disp(Label);\n "
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "Right Matrix Fraction| 1|s+1|[ ]|1|No change"
+      System {
+	Name			"PMF"
+	Location		[440, 28, 660, 116]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  Position		  [25, 38, 55, 52]
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  StateSpace
+	  Name			  "Inner"
+	  Position		  [75, 27, 135, 63]
+	  A			  "A"
+	  B			  "B"
+	  C			  "C"
+	  D			  "D"
+	  X0			  "InCon"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  Position		  [165, 38, 195, 52]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  DstBlock		  "Inner"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Inner"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+      }
+    }
+    Annotation {
+      Position		      [100, 56]
+      Text		      "Polynomial Matrix Fraction \nBlock for use with"
+" POL \nobjects and the\nPolynomial Toolbox 2.0"
+      FontName		      "helvetica"
+      FontSize		      12
+      FontWeight	      "bold"
+    }
+  }
+}
